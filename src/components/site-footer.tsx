@@ -17,8 +17,9 @@ export function SiteFooter() {
             {siteConfig.name}
           </p>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
-            Decoding human behavior, with precision. Predictive intelligence
-            for an emotionally stable world.
+            Decoding human behavior,{" "}
+            <span className="font-serif italic font-medium">with precision.</span>{" "}
+            Predictive intelligence for an emotionally stable world.
           </p>
           <p className="mt-6 text-sm text-muted">{siteConfig.address}</p>
         </div>

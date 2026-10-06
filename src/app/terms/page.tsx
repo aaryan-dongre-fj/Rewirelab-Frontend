@@ -5,7 +5,7 @@ import { termsOfService } from "@/lib/legal"
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms governing use of PredictiveMind and related services operated by The Rewire Lab.",
+    "Terms governing use of PredictiveMind and related services operated by The Rewire Lab Inc.",
 }
 
 export default function TermsPage() {

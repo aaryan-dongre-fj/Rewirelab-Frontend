@@ -2,6 +2,7 @@
 
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-source-serif), "Source Serif 4", ui-serif, Georgia, serif;
   --color-canvas: #efebe5;
   --color-paper: #f7f4ef;
   --color-ink: #141414;

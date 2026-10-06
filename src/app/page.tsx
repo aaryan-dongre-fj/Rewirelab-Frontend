@@ -12,13 +12,16 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
+const showStudio = false
+
 export default function HomePage() {
   return (
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-6 sm:px-6 sm:py-8">
       <section className="rounded-[28px] px-6 py-14 sm:px-12 sm:py-20">
         <BlurHeading
           as="h1"
-          text="Decoding human behavior, with precision."
+          text="Decoding human behavior,"
+          accent="with precision."
           className="mt-6 max-w-3xl text-[clamp(2.6rem,6.2vw,4.75rem)] font-medium leading-[1.02] tracking-[-0.06em]"
         />
         <Reveal delay={80} className="mt-6 max-w-xl">
@@ -53,7 +56,8 @@ export default function HomePage() {
             </p>
           </Reveal>
           <BlurHeading
-            text="From a pattern to a direction."
+            text="From a pattern"
+            accent="to a direction."
             className="mt-3 max-w-2xl text-3xl font-medium tracking-[-0.045em] sm:text-4xl"
           />
           <RevealGroup className="mt-10 grid gap-4 md:grid-cols-3">
@@ -76,29 +80,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="rounded-[28px] bg-ink px-6 py-12 text-canvas sm:px-12 sm:py-14">
-        <Reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.16em] text-canvas/60">
-            The studio
-          </p>
-        </Reveal>
-        <BlurHeading
-          text="Science, modeling, and a human finish."
-          className="mt-3 max-w-2xl text-3xl font-medium tracking-[-0.045em] text-canvas sm:text-4xl"
-        />
-        <Reveal delay={80} className="mt-5 max-w-2xl">
-          <p className="text-base leading-relaxed text-canvas/75 sm:text-lg">
-            Teams in El Segundo and Mumbai build the next generation of
-            behavioral intelligence. Mapping is the start. The work is showing
-            why a cycle repeats, then giving people a path that holds.
-          </p>
-        </Reveal>
-        <Reveal delay={140}>
-          <p className="mt-8 text-sm text-canvas/70">
-            El Segundo, California · Mumbai, India
-          </p>
-        </Reveal>
-      </section>
+      {showStudio ? (
+        <section className="rounded-[28px] bg-ink px-6 py-12 text-canvas sm:px-12 sm:py-14">
+          <Reveal>
+            <p className="text-xs font-medium uppercase tracking-[0.16em] text-canvas/60">
+              The studio
+            </p>
+          </Reveal>
+          <BlurHeading
+            text="Science, modeling,"
+            accent="and a human finish."
+            className="mt-3 max-w-2xl text-3xl font-medium tracking-[-0.045em] text-canvas sm:text-4xl"
+          />
+          <Reveal delay={80} className="mt-5 max-w-2xl">
+            <p className="text-base leading-relaxed text-canvas/75 sm:text-lg">
+              We build behavioral intelligence for people and organizations.
+              Mapping is the start. The work is showing why a cycle repeats,
+              then giving people a path that holds.
+            </p>
+          </Reveal>
+        </section>
+      ) : null}
     </div>
   );
 }

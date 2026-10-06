@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Source_Serif_4 } from "next/font/google"
 import { SiteFooter } from "@/components/site-footer"
 import { SiteHeader } from "@/components/site-header"
 import { siteConfig } from "@/lib/config"
@@ -8,6 +8,14 @@ import "./globals.css"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+})
+
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin"],
+  style: "italic",
+  weight: "500",
+  variable: "--font-source-serif",
   display: "swap",
 })
 
@@ -33,7 +41,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${inter.variable} ${sourceSerif.variable}`}
+      suppressHydrationWarning
+    >
       <body className="flex min-h-screen flex-col font-sans">
         <script
           dangerouslySetInnerHTML={{

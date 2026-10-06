@@ -8,7 +8,7 @@ export const siteConfig = {
   email: "admin@predictivemind.io",
   legalEmail: "admin@breakmethod.com",
   address: "676 Triangle Dr., Ponderay, ID 83852",
-  copyright: "© 2014-2026 The Rewire Lab Corp.",
+  copyright: "© 2014-2026 The Rewire Lab Inc.",
   social: {
     instagram: "https://www.instagram.com/breakmethod/",
     linkedin: "https://www.linkedin.com/company/break-method/",

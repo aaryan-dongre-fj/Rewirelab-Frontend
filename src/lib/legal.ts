@@ -10,16 +10,21 @@ export type LegalDocument = {
   blocks: LegalBlock[]
 }
 
-const entity = "The Rewire Lab"
+const entity = "The Rewire Lab Inc."
 const product = "PredictiveMind™"
+const identity = `${entity} (“we,” “our,” “us”) is an Ohio for-profit corporation, Ohio Secretary of State Entity No. 5182908, formed on February 14, 2024. We operate ${product} and the Break Method brand, which has been in use since 2014. The Ohio address on our state record belongs to our registered agent, Registered Agents Inc., and is not an office where we work. Our team operates from Idaho, USA, and India.`
 
 export const privacyPolicy: LegalDocument = {
   title: "Privacy Policy",
-  updated: "December 5, 2025",
+  updated: "October 6, 2026",
   blocks: [
     {
       kind: "p",
-      text: `${entity} (“we,” “our,” “us”), the company behind ${product}, is committed to protecting your privacy and ensuring that your personal information is handled with transparency, security, and respect. This Privacy Policy explains how we collect, use, store, and safeguard your data when you visit our website, participate in Brain Pattern Mapping assessments, communicate with us, or use any ${product} services.`,
+      text: identity,
+    },
+    {
+      kind: "p",
+      text: `We are committed to protecting your privacy and ensuring that your personal information is handled with transparency, security, and respect. This Privacy Policy explains how we collect, use, store, and safeguard your data when you visit our website, participate in Brain Pattern Mapping assessments, communicate with us, or use any ${product} services.`,
     },
     {
       kind: "p",
@@ -230,18 +235,22 @@ export const privacyPolicy: LegalDocument = {
     },
     {
       kind: "p",
-      text: `${entity} Privacy Officer. Email: admin@breakmethod.com. Address: 676 Triangle Dr., Ponderay, ID 83852.`,
+      text: `${entity} Privacy Officer. Email: admin@breakmethod.com. You may also write to us at 676 Triangle Dr., Ponderay, ID 83852. That is an Idaho correspondence address. Please do not send privacy requests to our Ohio registered agent.`,
     },
   ],
 }
 
 export const termsOfService: LegalDocument = {
   title: "Terms of Service",
-  updated: "December 5, 2025",
+  updated: "October 6, 2026",
   blocks: [
     {
       kind: "p",
-      text: `Welcome to ${entity} (“we,” “our,” “us”), the company behind ${product}. These Terms of Service (“Terms”) govern your access to and use of the ${product} website, assessments, data analytics, and related services (“Services”).`,
+      text: identity,
+    },
+    {
+      kind: "p",
+      text: `These Terms of Service (“Terms”) govern your access to and use of the ${product} website, assessments, data analytics, and related services (“Services”).`,
     },
     {
       kind: "p",
@@ -285,7 +294,7 @@ export const termsOfService: LegalDocument = {
     },
     {
       kind: "p",
-      text: `All rights not expressly granted to you are reserved by ${entity}.`,
+      text: `All rights not expressly granted to you are reserved by ${entity}`,
     },
     { kind: "h2", text: "3. Access Rights (Personal Use Only)" },
     {
@@ -389,7 +398,7 @@ export const termsOfService: LegalDocument = {
     { kind: "p", text: "You acknowledge and agree that:" },
     {
       kind: "p",
-      text: `${product} assessment questions, scoring logic, behavioral analytics, interpretive language, data structures, and algorithmic methodologies constitute proprietary and confidential trade secrets of ${entity}.`,
+      text: `${product} assessment questions, scoring logic, behavioral analytics, interpretive language, data structures, and algorithmic methodologies constitute proprietary and confidential trade secrets of ${entity}`,
     },
     { kind: "p", text: "Any attempt to:" },
     {
@@ -426,7 +435,7 @@ export const termsOfService: LegalDocument = {
     },
     {
       kind: "p",
-      text: `Outputs remain the intellectual property of ${entity}.`,
+      text: `Outputs remain the intellectual property of ${entity}`,
     },
     { kind: "h2", text: "10. Account Security" },
     {
@@ -522,7 +531,7 @@ export const termsOfService: LegalDocument = {
     { kind: "h2", text: "17. Governing Law" },
     {
       kind: "p",
-      text: "These Terms are governed by the laws of the State of Idaho, without regard to conflict-of-law principles.",
+      text: "These Terms are governed by the laws of the State of Ohio, where The Rewire Lab Inc. is incorporated, without regard to conflict-of-law principles.",
     },
     { kind: "h2", text: "18. Changes to These Terms" },
     {
@@ -536,7 +545,7 @@ export const termsOfService: LegalDocument = {
     },
     {
       kind: "p",
-      text: `${entity} Legal & Compliance. Email: admin@breakmethod.com. Address: 676 Triangle Dr., Ponderay, ID 83852.`,
+      text: `${entity} Legal & Compliance. Email: admin@breakmethod.com. You may also write to us at 676 Triangle Dr., Ponderay, ID 83852. That is an Idaho correspondence address. Please do not send legal notices to our Ohio registered agent.`,
     },
   ],
 }

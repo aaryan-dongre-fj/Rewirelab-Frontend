@@ -73,22 +73,28 @@ export function Reveal({
 
 export function BlurHeading({
   text,
+  accent,
   as: Tag = "h2",
   className = "",
 }: {
   text: string
+  accent?: string
   as?: "h1" | "h2"
   className?: string
 }) {
   const { ref, shown } = useInView<HTMLHeadingElement>()
-  const words = text.split(" ")
+  const words = [
+    ...text.split(" ").filter(Boolean).map((word) => ({ word, serif: false })),
+    ...(accent?.split(" ").filter(Boolean).map((word) => ({ word, serif: true })) ??
+      []),
+  ]
 
   return (
     <Tag ref={ref} className={`${className} ${shown ? "is-in" : ""}`}>
-      {words.map((word, index) => (
+      {words.map(({ word, serif }, index) => (
         <span
           key={`${word}-${index}`}
-          className="blur-word"
+          className={`blur-word${serif ? " font-serif italic tracking-[-0.03em]" : ""}`}
           style={{ animationDelay: `${index * 70}ms` }}
         >
           {word}
